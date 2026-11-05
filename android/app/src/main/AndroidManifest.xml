@@ -3,6 +3,12 @@
         android:label="flutter_anuncio"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        
+        <!-- ESTA ES LA POSICIÓN CORRECTA: Dentro de application, fuera de activity -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -20,6 +26,9 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+            
+            <!-- ELIMINÉ EL META-DATA DE ADMOB QUE ESTABA AQUÍ -->
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
